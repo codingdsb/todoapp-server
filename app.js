@@ -13,6 +13,7 @@ const main = () => {
       error: "Not found",
     });
   });
+  app.use(express.static("public"));
 
   mongoose
     .connect(MONGO_URI, {
@@ -31,6 +32,12 @@ const main = () => {
 
   app.use("/api", require("./routes/user"));
   app.use("/api", require("./routes/todo"));
+  app.get("/", (req, res) => {
+    res.json({
+      message: "Welcome to the API",
+      availableRoutes: ["/api/user/...", "/api/todo/..."],
+    });
+  });
 };
 
 main();
