@@ -1,0 +1,24 @@
+{
+  "name": "todo-app-server",
+  "version": "1.0.0",
+  "description": "Server for todo app",
+  "main": "app.js",
+  "author": "Darshan B",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  }
+}
