@@ -10,7 +10,7 @@ const main = () => {
   app.use(express.urlencoded({ extended: true }));
   app.use((req, res, next) => {
     res.status(404).json({
-      error: 404,
+      error: "Not found",
     });
   });
 
